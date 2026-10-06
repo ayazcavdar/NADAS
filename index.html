@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NADAS Restaurant – Geleneksel Lezzetler</title>
+    <meta name="description" content="Nadas Restaurant - Türk mutfağının geleneksel lezzetleri, lahmacun, pide, tantuni ve zengin tatlar modern dokunuşlarla Levent Loft'ta.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/nadas-fav-300x300.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/images/nadas-fav-300x300.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto+Condensed:wght@400;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-anasayfa-active">
+
+    <!-- Header / Navigation (Centered Logo Between Menu) -->
+    <header id="header-outer" class="site-header">
+        <div class="header-container">
+            <!-- Instagram Icon on Left -->
+            <a href="https://www.instagram.com/nadasloft/" target="_blank" rel="noopener noreferrer" class="nav-instagram-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- Left Navigation Group (Hakkımızda + Menü) -->
+            <div class="header-group header-left">
+                <ul class="nav-menu-list">
+                    <li class="nav-item">
+                        <a href="#hakkimizda" class="nav-tab-link" data-tab="hakkimizda">HAKKIMIZDA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-tab-link" data-tab="menu">MENÜ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Center Logo -->
+            <div class="header-group header-center">
+                <a href="#anasayfa" class="logo-link" data-tab="anasayfa" aria-label="NADAS Restaurant Anasayfa">
+                    <img src="assets/images/nadas_weblogo.png" alt="NADAS Restaurant" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Right Navigation Group (Galeri + İletişim) -->
+            <div class="header-group header-right">
+                <ul class="nav-menu-list">
+                    <li class="nav-item">
+                        <a href="#galeri" class="nav-tab-link" data-tab="galeri">GALERİ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#iletisim" class="nav-tab-link" data-tab="iletisim">İLETİŞİM</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <div class="mobile-toggle-wrap">
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menüyü Aç" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-Out Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+        <div class="drawer-overlay"></div>
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <img src="assets/images/nadas_weblogo.png" alt="NADAS Restaurant" class="drawer-logo">
+                <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Menüyü Kapat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="drawer-menu">
+                <li><a href="#anasayfa" class="drawer-link nav-tab-link" data-tab="anasayfa">ANASAYFA</a></li>
+                <li><a href="#hakkimizda" class="drawer-link nav-tab-link" data-tab="hakkimizda">HAKKIMIZDA</a></li>
+                <li><a href="#menu" class="drawer-link nav-tab-link" data-tab="menu">MENÜ</a></li>
+                <li><a href="#galeri" class="drawer-link nav-tab-link" data-tab="galeri">GALERİ</a></li>
+                <li><a href="#iletisim" class="drawer-link nav-tab-link" data-tab="iletisim">İLETİŞİM</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <a href="https://www.instagram.com/nadasloft/" target="_blank" rel="noopener noreferrer" class="drawer-social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@nadasloft</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container with 5 100vh Fullscreen Tab Pages (No Page Scrolling) -->
+    <main id="main-content">
+
+        <!-- ===================================================================
+             SAYFA 1: ANASAYFA (Giriş / Fullscreen Hero - Screenshot Replica)
+             =================================================================== -->
+        <section id="tab-anasayfa" class="tab-page active">
+            <div class="hero-fullscreen">
+                <!-- Background Slides -->
+                <div class="hero-slides-wrapper" id="heroSlider">
+                    <!-- Slide 1: Restaurant Interior (from screenshot) -->
+                    <div class="hero-slide active" style="background-image: url('assets/images/IMG_1227.jpg');"></div>
+                    <!-- Slide 2: Stone Oven & Pide / Lahmacun -->
+                    <div class="hero-slide" style="background-image: url('assets/images/IMG_1153.jpg');"></div>
+                    <!-- Slide 3: Tables & Dining Atmosphere -->
+                    <div class="hero-slide" style="background-image: url('assets/images/IMG_1157.jpg');"></div>
+                    <!-- Slide 4: Fresh Dishes & Specials -->
+                    <div class="hero-slide" style="background-image: url('assets/images/IMG_1159.jpg');"></div>
+                </div>
+
+                <!-- Minimalist Navigation Chevrons (< and >) -->
+                <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Önceki Görsel">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="hero-arrow hero-next" id="heroNext" aria-label="Sonraki Görsel">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+
+                <!-- Floating Semi-Transparent Outline Marquee Ticker -->
+                <div class="hero-marquee-bar" aria-hidden="true">
+                    <div class="hero-marquee-track">
+                        <div class="hero-marquee-group">
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                        </div>
+                        <div class="hero-marquee-group" aria-hidden="true">
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                            <span class="marquee-text-outline">GELENEKSEL LEZZETLER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SAYFA 2: HAKKIMIZDA (100vh Fits Screen, No Scroll)
+             =================================================================== -->
+        <section id="tab-hakkimizda" class="tab-page">
+            <div class="screen-view-wrapper">
+                <div class="view-header-strip">
+                    <h1 class="view-title">HAKKIMIZDA</h1>
+                    <span class="view-subtitle">Geleneksel Lezzetlerin Modern Dokunuşlarla Buluşması</span>
+                </div>
+
+                <div class="view-content-area">
+                    <div class="story-fit-card">
+                        <!-- Left: Story Text with Background Image Overlay & Internal Scroll -->
+                        <div class="story-text-column" style="background-image: url('assets/images/370799.jpg');">
+                            <div class="story-col-overlay"></div>
+                            <div class="story-inner">
+                                <h2 class="story-heading">Hikayemiz…</h2>
+                                <div class="story-body-box">
+                                    <p>Nadas olarak, Türk mutfağının en güzel örneklerini modern dokunuşlarla buluşturarak, misafirlerimize benzersiz bir lezzet deneyimi sunuyoruz. Yalnızca en kaliteli ve doğal malzemeleri seçerek, her yemeğimizde doğallığı ve lezzeti ön planda tutuyoruz. Menümüzde, geleneksel Türk mutfağının vazgeçilmezleri arasında yer alan lahmacun ve pide çeşitlerinden, Anadolu’nun zengin tatlarına kadar geniş bir yelpazede seçenekler bulunuyor.</p>
+                                    <p>Günlük olarak hazırlanan özel Nadas menülerimiz, taptaze malzemelerle hazırlanarak misafirlerimize sunuluyor. Ayrıca, tantuni ve çeşitli çorbalarımızla, geleneksel lezzetleri modern bir sunumla buluşturuyoruz. Tatlı ve ara sıcak seçeneklerimiz de, bu lezzet yolculuğunu tamamlayan unsurlar arasında yer alıyor.</p>
+                                    <p>Nadas olarak, her lokmada kalite ve lezzeti bir araya getirirken, misafirlerimize sıcak ve samimi bir atmosferde hizmet vermekten gurur duyuyoruz.</p>
+                                    <div class="story-signature">
+                                        <strong>NADAS Ekibi</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Huge NADAS Emblem (Centered, Fills Space, No Duplicate Logo) -->
+                        <div class="story-logo-column">
+                            <div class="story-huge-logo-wrapper">
+                                <img src="assets/images/nadas-fav.png" alt="NADAS Emblem" class="story-huge-emblem">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="view-footer-strip">
+                    <span>&copy; <span class="current-year">2026</span> NADAS Restaurant. Tüm hakları saklıdır.</span>
+                    <span>Levent Loft • İstanbul</span>
+                </footer>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SAYFA 3: MENÜ (100vh Fits Screen, No Scroll)
+             =================================================================== -->
+        <section id="tab-menu" class="tab-page">
+            <div class="screen-view-wrapper">
+                <div class="view-header-strip">
+                    <h1 class="view-title">NADAS MENÜ</h1>
+                    <span class="view-subtitle">Taş Fırından Masanıza Dijital & QR Menü</span>
+                </div>
+
+                <div class="view-content-area">
+                    <div class="menu-fit-grid">
+                        <!-- Left: Interactive MenuLux Iframe Embed -->
+                        <div class="menu-iframe-frame">
+                            <div class="iframe-mock-bar">
+                                <div class="mock-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="mock-title">MenuLux Dijital Menü</span>
+                                <a href="https://nadasloft.qr.menulux.com/#!/categories" target="_blank" rel="noopener noreferrer" class="mock-ext-btn" title="Yeni Sekmede Aç">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <iframe 
+                                src="https://nadasloft.qr.menulux.com/#!/categories" 
+                                title="NADAS Dijital Menü" 
+                                class="fit-menulux-iframe" 
+                                loading="lazy" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <!-- Right: QR Card -->
+                        <div class="menu-qr-card-fit">
+                            <div class="qr-box">
+                                <img src="assets/images/unnamed.png" alt="Nadas QR Menü" class="qr-img">
+                            </div>
+                            <h3 class="qr-heading">Masada veya Pakette</h3>
+                            <p class="qr-desc">Akıllı telefonunuzla QR kodu okutarak güncel fiyatları, günlük özel menülerimizi ve spesiyallerimizi inceleyebilirsiniz.</p>
+                            <a href="https://nadasloft.qr.menulux.com/#!/categories" target="_blank" rel="noopener noreferrer" class="btn btn-primary qr-btn">
+                                <i class="fa-solid fa-utensils"></i> Tam Ekran Menü Aç
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="view-footer-strip">
+                    <span>&copy; <span class="current-year">2026</span> NADAS Restaurant. Tüm hakları saklıdır.</span>
+                    <span>Levent Loft • İstanbul</span>
+                </footer>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SAYFA 4: GALERİ (100vh Fits Screen, No Scroll)
+             =================================================================== -->
+        <section id="tab-galeri" class="tab-page">
+            <div class="screen-view-wrapper">
+                <div class="view-header-strip">
+                    <h1 class="view-title">GALERİ & LEZZETLERİMİZ</h1>
+                    <span class="view-subtitle">Nadas Atmosferi ve Özel Sunumlar</span>
+                </div>
+
+                <div class="view-content-area">
+                    <div class="gallery-fit-showcase">
+                        <div class="gallery-card" data-src="assets/images/IMG_1227.jpg" data-caption="Nadas Restaurant - Şık ve Samimi Mekan">
+                            <img src="assets/images/IMG_1227.jpg" alt="Nadas Restaurant İç Mekan">
+                            <div class="gal-badge">İç Mekan & Atmosfer</div>
+                            <div class="gal-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+
+                        <div class="gallery-card" data-src="assets/images/IMG_1153.jpg" data-caption="Taş Fırın Lahmacun & Geleneksel Pide">
+                            <img src="assets/images/IMG_1153.jpg" alt="Taş Fırın Lahmacun">
+                            <div class="gal-badge">Taş Fırın Lahmacun</div>
+                            <div class="gal-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+
+                        <div class="gallery-card" data-src="assets/images/IMG_1157.jpg" data-caption="Özel Masalar & Servis">
+                            <img src="assets/images/IMG_1157.jpg" alt="Nadas Masa Sunumu">
+                            <div class="gal-badge">Masa Düzeni & Servis</div>
+                            <div class="gal-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+
+                        <div class="gallery-card" data-src="assets/images/IMG_1159.jpg" data-caption="Günün Taze Menüleri & Meze Çeşitleri">
+                            <img src="assets/images/IMG_1159.jpg" alt="Taze Menüler ve Mezeler">
+                            <div class="gal-badge">Günün Spesiyalleri</div>
+                            <div class="gal-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="view-footer-strip">
+                    <span>&copy; <span class="current-year">2026</span> NADAS Restaurant. Tüm hakları saklıdır.</span>
+                    <span>Büyütmek için fotoğraflara tıklayabilirsiniz</span>
+                </footer>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SAYFA 5: İLETİŞİM (100vh Fits Screen, No Scroll)
+             =================================================================== -->
+        <section id="tab-iletisim" class="tab-page">
+            <div class="screen-view-wrapper">
+                <div class="view-header-strip">
+                    <h1 class="view-title">İLETİŞİM</h1>
+                    <span class="view-subtitle">Çalışma Saatleri, Adres ve Ulaşım Bilgileri</span>
+                </div>
+
+                <div class="view-content-area">
+                    <div class="contact-luxury-card">
+                        <!-- Left Column: Hours with Background Image Overlay (Hakkımızda Style) -->
+                        <div class="contact-left-col" style="background-image: url('assets/images/IMG_1157.jpg');">
+                            <div class="contact-col-overlay"></div>
+                            <div class="contact-col-inner">
+                                <h2 class="contact-heading">Çalışma Saatleri</h2>
+                                <div class="contact-hours-table">
+                                    <div class="contact-hour-row">
+                                        <span class="day">Pazartesi – Cuma:</span>
+                                        <span class="time">08:00 – 18:00</span>
+                                    </div>
+                                    <div class="contact-hour-row">
+                                        <span class="day">Cumartesi:</span>
+                                        <span class="time">09:00 – 13:00</span>
+                                    </div>
+                                    <div class="contact-hour-row closed">
+                                        <span class="day">Pazar:</span>
+                                        <span class="time">Kapalı</span>
+                                    </div>
+                                </div>
+                                <div class="contact-note-text">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Özel grup ve etkinlik rezervasyonları için telefon ile ulaşabilirsiniz.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: NADAS LOFT Details (Hakkımızda Style) -->
+                        <div class="contact-right-col">
+                            <div class="contact-col-inner">
+                                <h2 class="contact-heading">NADAS LOFT</h2>
+                                <div class="contact-details-block">
+                                    <div class="contact-detail-item">
+                                        <span class="detail-label"><i class="fa-solid fa-location-dot"></i> ADRES</span>
+                                        <span class="detail-value">Büyükdere Cad. No: 201 Levent Loft giriş kat, Şişli / İstanbul</span>
+                                    </div>
+                                    <div class="contact-detail-item">
+                                        <span class="detail-label"><i class="fa-solid fa-phone"></i> TELEFON</span>
+                                        <span class="detail-value">
+                                            <a href="tel:05431202347" class="contact-tel-link">0543 120 23 47</a>
+                                            <span class="contact-dahili">(Dahili: 27)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="contact-actions-wrap">
+                                    <a href="https://maps.google.com/?q=Büyükdere+Cad.+No:+201+Levent+Loft+İstanbul" target="_blank" rel="noopener noreferrer" class="contact-luxury-btn primary">
+                                        <i class="fa-solid fa-diamond-turn-right"></i> Haritada Gör
+                                    </a>
+                                    <a href="tel:05431202347" class="contact-luxury-btn secondary">
+                                        <i class="fa-solid fa-phone"></i> Hemen Ara
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Luxury Strip -->
+                    <div class="instagram-luxury-strip">
+                        <div class="insta-left">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Bizi Instagram'da takip edin: <strong>@nadasloft</strong></span>
+                        </div>
+                        <a href="https://www.instagram.com/nadasloft/" target="_blank" rel="noopener noreferrer" class="insta-luxury-link">
+                            Profili Görüntüle <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <footer class="view-footer-strip">
+                    <span>&copy; <span class="current-year">2026</span> NADAS Restaurant. Tüm hakları saklıdır.</span>
+                    <span>Levent Loft • İstanbul</span>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+        <button id="lightbox-close-btn" class="lightbox-close" aria-label="Kapat">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="Büyütülmüş Görsel" id="lightbox-img" class="lightbox-img">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
