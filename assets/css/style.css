@@ -870,7 +870,7 @@ body.page-sub-active .site-header {
 .gallery-fit-showcase {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    gap: 16px;
     height: 100%;
     max-height: calc(100vh - 180px);
 }
@@ -880,7 +880,7 @@ body.page-sub-active .site-header {
     border-radius: 8px;
     overflow: hidden;
     height: 100%;
-    background-color: #000000;
+    background-color: #0d0d0d;
     cursor: pointer;
     box-shadow: var(--box-shadow-card);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -890,7 +890,7 @@ body.page-sub-active .site-header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease, filter 0.5s ease;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .gal-badge {
@@ -899,32 +899,34 @@ body.page-sub-active .site-header {
     left: 0;
     width: 100%;
     padding: 10px 14px;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.88) 100%);
     color: #ffffff;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.5px;
     z-index: 2;
     transition: transform 0.3s ease;
+    pointer-events: none;
 }
 
 .gal-hover {
     position: absolute;
     inset: 0;
-    background-color: rgba(207, 46, 46, 0.45);
+    background-color: rgba(18, 18, 18, 0.65);
     opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    font-size: 2rem;
-    transition: opacity 0.3s ease;
+    color: var(--color-gold);
+    font-size: 1.8rem;
+    transition: opacity var(--transition-fast);
     z-index: 3;
+    pointer-events: none;
 }
 
 .gallery-card:hover img {
-    transform: scale(1.08);
-    filter: brightness(0.8);
+    transform: scale(1.05);
+    filter: brightness(0.85);
 }
 
 .gallery-card:hover .gal-hover {
@@ -936,12 +938,12 @@ body.page-sub-active .site-header {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.94);
-    z-index: 3000;
+    z-index: 9999;
     display: none;
     align-items: center;
     justify-content: center;
     padding: 30px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 
 .lightbox-modal.active {
@@ -952,18 +954,25 @@ body.page-sub-active .site-header {
     position: absolute;
     top: 24px;
     right: 28px;
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.25rem;
     cursor: pointer;
-    z-index: 10;
-    padding: 10px;
-    opacity: 0.8;
+    z-index: 10000;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .lightbox-close:hover {
-    opacity: 1;
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #121212;
 }
 
 .lightbox-content {
@@ -972,18 +981,24 @@ body.page-sub-active .site-header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    user-select: none;
 }
 
 .lightbox-img {
     max-width: 100%;
     max-height: 75vh;
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .lightbox-caption {
-    color: #e0e0e0;
-    font-size: 1rem;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.12rem;
+    letter-spacing: 0.5px;
     margin-top: 14px;
     text-align: center;
 }
@@ -1264,6 +1279,8 @@ body.page-sub-active .site-header {
     
     .gallery-fit-showcase {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        overflow-y: auto;
     }
     
     .contact-luxury-card {
@@ -1300,5 +1317,7 @@ body.page-sub-active .site-header {
     
     .gallery-fit-showcase {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        overflow-y: auto;
     }
 }

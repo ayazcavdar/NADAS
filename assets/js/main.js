@@ -236,7 +236,7 @@ function initMobileDrawer() {
    4. Gallery Lightbox Modal
    ========================================================================== */
 function initGalleryLightbox() {
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-card, .gallery-item'));
     const modal = document.getElementById('lightbox-modal');
     const modalImg = document.getElementById('lightbox-img');
     const modalCaption = document.getElementById('lightbox-caption');
@@ -244,9 +244,19 @@ function initGalleryLightbox() {
 
     if (!modal || !galleryItems.length) return;
 
-    const openModal = (src, caption) => {
+    let currentIndex = 0;
+
+    const openModalByIndex = (index) => {
+        if (index < 0) index = galleryItems.length - 1;
+        if (index >= galleryItems.length) index = 0;
+        currentIndex = index;
+
+        const item = galleryItems[currentIndex];
+        const src = item.getAttribute('data-src') || (item.querySelector('img') ? item.querySelector('img').src : '');
+        const caption = item.getAttribute('data-caption') || '';
+
         modalImg.src = src;
-        modalCaption.textContent = caption || '';
+        modalCaption.textContent = caption;
         modal.classList.add('active');
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -258,18 +268,23 @@ function initGalleryLightbox() {
         document.body.style.overflow = '';
         setTimeout(() => {
             modalImg.src = '';
+            modalCaption.textContent = '';
         }, 200);
     };
 
-    galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const src = item.getAttribute('data-src');
-            const caption = item.getAttribute('data-caption');
-            openModal(src, caption);
+    galleryItems.forEach((item, index) => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModalByIndex(index);
         });
     });
 
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+    });
 
     modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target.classList.contains('lightbox-content')) {
@@ -278,8 +293,13 @@ function initGalleryLightbox() {
     });
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') {
             closeModal();
+        } else if (e.key === 'ArrowRight') {
+            openModalByIndex(currentIndex + 1);
+        } else if (e.key === 'ArrowLeft') {
+            openModalByIndex(currentIndex - 1);
         }
     });
 }
