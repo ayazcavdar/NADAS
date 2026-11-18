@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initMobileDrawer();
     initGalleryLightbox();
+    initMenuThemeToggle();
     updateCopyrightYears();
 });
 
@@ -51,8 +52,13 @@ function switchTab(tabId, updateHistory = true) {
         }
     });
 
-    // 4. Scroll to top instantly
+    // 4. Scroll window and inner active container to top instantly
     window.scrollTo({ top: 0, behavior: 'instant' });
+    const activePage = document.getElementById(`tab-${tabId}`);
+    if (activePage) {
+        const scrollContainers = activePage.querySelectorAll('.view-content-area, .story-body-box, .story-text-column, .gallery-fit-showcase, .contact-luxury-card');
+        scrollContainers.forEach(el => { el.scrollTop = 0; });
+    }
 
     // 5. Update browser URL hash for seamless back/forward navigation
     if (updateHistory) {
@@ -311,5 +317,21 @@ function updateCopyrightYears() {
     const year = new Date().getFullYear();
     document.querySelectorAll('.current-year').forEach(el => {
         el.textContent = year;
+    });
+}
+
+/* ==========================================================================
+   6. MenuLux Iframe Theme Toggle (Dark Mode / Light Mode)
+   ========================================================================== */
+function initMenuThemeToggle() {
+    const toggleBtn = document.getElementById('menu-theme-toggle');
+    const iframe = document.querySelector('.fit-menulux-iframe');
+    
+    if (!toggleBtn || !iframe) return;
+
+    toggleBtn.addEventListener('click', () => {
+        const isLight = iframe.classList.toggle('light-theme');
+        toggleBtn.innerHTML = isLight ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        toggleBtn.setAttribute('title', isLight ? 'Koyu Temaya Geç' : 'Açık Temaya Geç');
     });
 }

@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>NADAS Restaurant – Geleneksel Lezzetler</title>
     <meta name="description" content="Nadas Restaurant - Türk mutfağının geleneksel lezzetleri, lahmacun, pide, tantuni ve zengin tatlar modern dokunuşlarla Levent Loft'ta.">
     
@@ -119,6 +119,15 @@
                     <div class="hero-slide" style="background-image: url('assets/images/IMG_1159.jpg');"></div>
                 </div>
 
+                <!-- Hero Centerpieces: Luxury Tagline, Title & Fast Action Buttons -->
+                <div class="hero-center-content">
+                    <div class="hero-badge-tag">
+                        <i class="fa-solid fa-fire"></i> TAŞ FIRIN & GELENEKSEL MUTFAK
+                    </div>
+                    <h1 class="hero-center-title">GELENEKSEL LEZZETLER</h1>
+                    <p class="hero-center-desc">Özel dinlendirilmiş hamurla taş fırından çıtır pideler, zırh lahmacunu, Mersin tantunisi ve taze günlük lezzetler Levent Loft'ta.</p>
+                </div>
+
                 <!-- Minimalist Navigation Chevrons (< and >) -->
                 <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Önceki Görsel">
                     <i class="fa-solid fa-angle-left"></i>
@@ -205,14 +214,20 @@
                     <div class="menu-fit-grid">
                         <!-- Left: Interactive MenuLux Iframe Embed -->
                         <div class="menu-iframe-frame">
-                            <div class="iframe-mock-bar">
-                                <div class="mock-dots">
-                                    <span></span><span></span><span></span>
+                            <div class="menu-frame-bar">
+                                <div class="menu-bar-left">
+                                    <i class="fa-solid fa-utensils"></i>
+                                    <span class="menu-bar-title">NADAS Dijital Menü</span>
                                 </div>
-                                <span class="mock-title">MenuLux Dijital Menü</span>
-                                <a href="https://nadasloft.qr.menulux.com/#!/categories" target="_blank" rel="noopener noreferrer" class="mock-ext-btn" title="Yeni Sekmede Aç">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
+                                <div class="menu-bar-actions">
+                                    <button type="button" id="menu-theme-toggle" class="menu-theme-btn" title="Koyu / Açık Tema" aria-label="Tema Değiştir">
+                                        <i class="fa-solid fa-moon"></i>
+                                    </button>
+                                    <a href="https://nadasloft.qr.menulux.com/#!/categories" target="_blank" rel="noopener noreferrer" class="menu-bar-ext-btn" title="Yeni Sekmede Aç">
+                                        <span>Tam Ekran Aç</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
                             </div>
                             <iframe 
                                 src="https://nadasloft.qr.menulux.com/#!/categories" 
@@ -223,16 +238,41 @@
                             </iframe>
                         </div>
 
-                        <!-- Right: QR Card -->
-                        <div class="menu-qr-card-fit">
-                            <div class="qr-box">
-                                <img src="assets/images/unnamed.png" alt="Nadas QR Menü" class="qr-img">
+                        <!-- Right: QR & Visual Card (Using Restaurant Images, No Order Features) -->
+                        <div class="menu-qr-card-fit" style="background-image: url('assets/images/IMG_1153.jpg');">
+                            <div class="menu-qr-overlay"></div>
+                            <div class="menu-qr-inner">
+                                <div class="menu-qr-top">
+                                    <span class="menu-qr-badge">
+                                        <i class="fa-solid fa-fire"></i> TAŞ FIRIN & GELENEKSEL
+                                    </span>
+                                    <h3 class="qr-heading">Masada QR Menü</h3>
+                                    <p class="qr-desc">Telefonunuzun kamerası ile QR kodu okutabilir veya menüyü tam ekran olarak görüntüleyebilirsiniz.</p>
+                                </div>
+
+                                <!-- Food & Ambience Image Thumbnails -->
+                                <div class="menu-visual-previews">
+                                    <div class="menu-preview-img-wrap">
+                                        <img src="assets/images/IMG_1153.jpg" alt="Taş Fırın Lahmacun & Pide">
+                                        <span>Taş Fırın</span>
+                                    </div>
+                                    <div class="menu-preview-img-wrap">
+                                        <img src="assets/images/IMG_1159.jpg" alt="Taze Günlük Lezzetler">
+                                        <span>Spesiyaller</span>
+                                    </div>
+                                </div>
+
+                                <!-- QR Code Box -->
+                                <div class="qr-box">
+                                    <img src="assets/images/unnamed.png" alt="Nadas QR Menü" class="qr-img">
+                                </div>
+
+                                <div class="menu-qr-bottom">
+                                    <a href="https://nadasloft.qr.menulux.com/#!/categories" target="_blank" rel="noopener noreferrer" class="contact-luxury-btn primary qr-btn">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Menüyü Tam Ekran Aç
+                                    </a>
+                                </div>
                             </div>
-                            <h3 class="qr-heading">Masada veya Pakette</h3>
-                            <p class="qr-desc">Akıllı telefonunuzla QR kodu okutarak güncel fiyatları, günlük özel menülerimizi ve spesiyallerimizi inceleyebilirsiniz.</p>
-                            <a href="https://nadasloft.qr.menulux.com/#!/categories" target="_blank" rel="noopener noreferrer" class="btn btn-primary qr-btn">
-                                <i class="fa-solid fa-utensils"></i> Tam Ekran Menü Aç
-                            </a>
                         </div>
                     </div>
                 </div>
